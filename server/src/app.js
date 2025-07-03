@@ -6,7 +6,7 @@ const app = express();
 const session = require('express-session');
 
 app.use(cors({
-    origin: 'http://localhost:5173', // Adjust this to your client URL
+    origin: 'dev-help-nu.vercel.app',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
