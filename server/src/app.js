@@ -6,7 +6,7 @@ const app = express();
 const session = require('express-session');
 
 app.use(cors({
-    origin: 'dev-help-nu.vercel.app',
+    origin: 'https://dev-help-nu.vercel.app/',
     methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
     credentials: true,
 }));
