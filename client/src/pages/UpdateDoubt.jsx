@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { updateDoubtThunk, readDoubtThunk, getAllDoubtsThunk } from "../features/doubts/doubtSlice";
+import { updateDoubtThunk, readDoubtThunk, getAllDoubtsThunk, getMyDoubtsThunk } from "../features/doubts/doubtSlice";
 import { useNavigate, useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 
@@ -62,7 +62,7 @@ const UpdateDoubt = () => {
 
     dispatch(updateDoubtThunk({ id, updatedData: formData })).then(() => {
       toast.success("Doubt updated successfully!");
-      dispatch(getAllDoubtsThunk());
+      dispatch(getMyDoubtsThunk());
       navigate("/dashboard");
     });
   };
